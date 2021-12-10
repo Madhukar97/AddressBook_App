@@ -87,6 +87,9 @@ body {
   border-radius: 4px;
   resize: vertical;
 }
+.address{
+  min-height: 100px;
+}
 select {
   margin-right: 12.45%;
   width: 15%;
