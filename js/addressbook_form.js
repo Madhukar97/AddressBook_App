@@ -106,3 +106,4 @@ const reserForm = () => {
     document.querySelector('#phone').value = '';
     document.querySelector('.phone-error').textContent = '';
 }
+
