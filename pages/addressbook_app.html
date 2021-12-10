@@ -21,12 +21,14 @@
   </header>
   <div class="main-content">
     <div class="form-box">
-      <form class="form">
+      <form class="form" action="#" onsubmit="save(event);return false" onreset="reserForm()">
         <div class="form-header">
           <div class="form-head">PERSON ADDRESS FORM</div>
           <div class="cancel-button">
-            <img class="cancel-button-img" src="../assets/buttons/cancel-button.png" alt="cancel">
-          </div>
+            <a href="../pages/homePage.html">
+              <img class="cancel-button-img" src="../assets/buttons/cancel-button.png" alt="cancel">
+            </a>
+            </div>
         </div>
         <div class="row-content">
           <label class="label" for="name"></label>
@@ -65,7 +67,7 @@
           <error-output class="phone-error" for='text'></error-output>
         </div>
         <div class="buttonParent">
-          <button type="add" class="addButton" id="addButton">Add</button>
+          <button type="submit" class="addButton" id="addButton">Add</button>
           <button type="reset" class="resetButton" id="resetButton">Reset</button>
         </div>
       </form>
