@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AddressBookForm</title>
+  <link rel="stylesheet" href="../css/addressbook_form.css">
 </head>
+
 <body>
-    <h1>Welcome to Address Book App</h1>
+  <header class="header-content header">
+    <div class="logo-content">
+      <img class="cancel-button-img" src="../assets/icons/address-book-logo.png" alt="logo image">
+      <div>
+        <span class="header-text">Address</span><br>
+        <span class="header-text book-text">Book</span>
+      </div>
+    </div>
+  </header>
+  <div class="main-content">
+    <div class="form-box">
+      <form class="form">
+        <div class="form-header">
+          <div class="form-head">PERSON ADDRESS FORM</div>
+          <div class="cancel-button">
+            <img class="cancel-button-img" src="../assets/buttons/cancel-button.png" alt="cancel">
+          </div>
+        </div>
+        <div class="row-content">
+          <label class="label" for="name"></label>
+          <input class="input" type="text" id="name" name="name" placeholder="Full Name.." required>
+        </div>
+        <div class="row-content">
+          <label class="label" for="address"></label>
+          <input class="input" type="text" id="address" name="address" placeholder="Address" required>
+        </div>
+        <div class="row-content input-items">
+          <select id="City" name="City">
+            <option value="">Select City</option>
+            <option value="Vizag">Vizag</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Hyderabad">Hyderabad</option>
+          </select>
+          <select id="State" name="State">
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andres Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Utter Pradesh">Utter Pradesh</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+          <label class="label" for="zip"></label>
+          <input class="zip-code" type="text" id="zip" name="zip" placeholder="Zip Code" required>
+        </div>
+        <div class="row-content">
+          <label class="label" for="phone"></label>
+          <input class="input" type="text" id="phone" name="phone" placeholder="Phone No" required>
+        </div>
+        <div class="buttonParent">
+          <button type="add" class="addButton" id="addButton">Add</button>
+          <button type="reset" class="resetButton" id="resetButton">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>
