@@ -92,4 +92,18 @@ function createAndUpdateStorage(addressbookData){
     }
     alert(addressbookList.toString());
     localStorage.setItem('AddressbookList', JSON.stringify(addressbookList));
+
+}
+
+const reserForm = () => {
+    document.querySelector('#name').value = '';
+    document.querySelector('.name-error').textContent = '';
+    document.querySelector('#address').value = '';
+    document.querySelector('.address-error').textContent = '';
+    document.querySelector('#city').value = '';
+    document.querySelector('#state').value = '';
+    document.querySelector('#zip').value = '';
+    document.querySelector('.zip-error').textContent = '';
+    document.querySelector('#phone').value = '';
+    document.querySelector('.phone-error').textContent = '';
 }
