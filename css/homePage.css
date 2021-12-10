@@ -1,6 +1,7 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   margin: 0;
   height: 100%;
@@ -72,6 +73,7 @@ body {
   font-size: 25px;
   font-weight: 780;
 }
+
 .person-count {
   background-color: #1785df;
   color: #ffffff;
@@ -81,6 +83,7 @@ body {
   text-align: center;
   display: inline-block;
 }
+
 .add-button {
   display: flex;
   flex-direction: row;
@@ -96,22 +99,26 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+
 .table {
   justify-content: left;
   align-items: center;
   width: 80%;
-  
+
 }
+
 td {
   text-align: left;
   width: 100%;
   padding: 15px 20px;
   background-color: #ffffff;
 }
+
 .table-data {
   border: 1px solid #cecece;
   margin-bottom: 10px;
 }
+
 th {
   text-align: left;
   width: 100%;
@@ -119,14 +126,17 @@ th {
   border: 0px solid #dd4a10;
   color: #467296;
 }
+
 tr {
   display: flex;
   justify-content: space-between;
   border: 0px solid green;
 }
+
 .address-block {
   min-width: 400px;
 }
+
 .buttons {
   padding-right: 20px;
 }

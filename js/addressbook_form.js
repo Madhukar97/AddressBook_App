@@ -78,21 +78,20 @@ const createAddressbook = () => {
     addressbookData.state = document.querySelector('#state').value;
     addressbookData.zipcode = document.querySelector('#zip').value;
     addressbookData.phone = document.querySelector('#phone').value;
-    alert(addressbookData.toString());
+    alert('heloooooooooooo' + addressbookData.toString());
     return addressbookData;
 }
 
-function createAndUpdateStorage(addressbookData){
-    let addressbookList = JSON.parse(localStorage.getItem('AddressBookList'));
-    if(addressbookList != undefined){
-        addressbookList.push(addressbookData);
-    }else{
-        addressbookList = []
-        addressbookList.push(addressbookData);
-    }
-    alert(addressbookList.toString());
-    localStorage.setItem('AddressbookList', JSON.stringify(addressbookList));
+const createAndUpdateStorage = (addressBookData) => {
+    let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
 
+    if (addressBookList != undefined) {
+        addressBookList.push(addressBookData);
+    } else {
+        addressBookList = [addressBookData];
+    }
+    alert(addressBookList.toString());
+    localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
 }
 
 const reserForm = () => {
