@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 const save = () => {
     try {
         let addressbookData = createAddressbook();
+        createAndUpdateStorage(addressbookData);
     } catch (e) {
         return;
     }
@@ -79,4 +80,16 @@ const createAddressbook = () => {
     addressbookData.phone = document.querySelector('#phone').value;
     alert(addressbookData.toString());
     return addressbookData;
+}
+
+function createAndUpdateStorage(addressbookData){
+    let addressbookList = JSON.parse(localStorage.getItem('AddressBookList'));
+    if(addressbookList != undefined){
+        addressbookList.push(addressbookData);
+    }else{
+        addressbookList = []
+        addressbookList.push(addressbookData);
+    }
+    alert(addressbookList.toString());
+    localStorage.setItem('AddressbookList', JSON.stringify(addressbookList));
 }
