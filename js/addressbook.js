@@ -3,7 +3,7 @@ class Addressbook {
     return this._name;
   }
   set name(name) {
-    let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+    let nameRegex = RegExp('^([A-Z]{1}[a-z]{2,}[ ]{0,1})+$');
     if (nameRegex.test(name))
       this._name = name;
     else throw "Name is Incorrect";
@@ -51,5 +51,11 @@ class Addressbook {
     if (phoneRegex.test(phone))
       this._phone = phone;
     else throw "Phone is Incorrect";
+  }
+
+  toString() {
+    return "id : " + this.id + ", Name : " + this.name + ", Address : " + this.address +
+      ", City : " + this.city + ", State : " + this.state + ", Zip : " + this.zipcode +
+      ", PhoneNo : " + this.phone;
   }
 }

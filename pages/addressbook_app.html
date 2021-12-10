@@ -21,14 +21,14 @@
   </header>
   <div class="main-content">
     <div class="form-box">
-      <form class="form" action="#" onsubmit="save(event);return false" onreset="reserForm()">
+      <form class="form" action="#" onsubmit="save()" onreset="reserForm()">
         <div class="form-header">
           <div class="form-head">PERSON ADDRESS FORM</div>
           <div class="cancel-button">
             <a href="../pages/homePage.html">
               <img class="cancel-button-img" src="../assets/buttons/cancel-button.png" alt="cancel">
             </a>
-            </div>
+          </div>
         </div>
         <div class="row-content">
           <label class="label" for="name"></label>
@@ -41,7 +41,7 @@
           <error-output class="address-error" for='text'></error-output>
         </div>
         <div class="row-content input-items">
-          <select id="City" name="City">
+          <select id="city" name="city">
             <option value="">Select City</option>
             <option value="Vizag">Vizag</option>
             <option value="Bangalore">Bangalore</option>
@@ -49,7 +49,7 @@
             <option value="Mumbai">Mumbai</option>
             <option value="Hyderabad">Hyderabad</option>
           </select>
-          <select id="State" name="State">
+          <select id="state" name="state">
             <option value="">Select State</option>
             <option value="Andhra Pradesh">Andres Pradesh</option>
             <option value="Maharashtra">Maharashtra</option>
@@ -73,7 +73,7 @@
       </form>
     </div>
   </div>
-  <script defer src="../js/addressbook.js"></script> 
+  <script defer src="../js/addressbook.js"></script>
   <script defer src="../js/addressbook_form.js"></script>
 </body>
 
