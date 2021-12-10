@@ -31,10 +31,12 @@
         <div class="row-content">
           <label class="label" for="name"></label>
           <input class="input" type="text" id="name" name="name" placeholder="Full Name.." required>
+          <error-output class="name-error" for='text'></error-output>
         </div>
         <div class="row-content address">
           <label class="label" for="address"></label>
           <textarea class="input" type="text" id="address" name="address" placeholder="Address" required></textarea>
+          <error-output class="address-error" for='text'></error-output>
         </div>
         <div class="row-content input-items">
           <select id="City" name="City">
@@ -55,10 +57,12 @@
           </select>
           <label class="label" for="zip"></label>
           <input class="zip-code" type="text" id="zip" name="zip" placeholder="Zip Code" required>
+          <error-output class="zip-error" for='text'></error-output>
         </div>
         <div class="row-content">
           <label class="label" for="phone"></label>
           <input class="input" type="text" id="phone" name="phone" placeholder="Phone No" required>
+          <error-output class="phone-error" for='text'></error-output>
         </div>
         <div class="buttonParent">
           <button type="add" class="addButton" id="addButton">Add</button>
@@ -67,6 +71,8 @@
       </form>
     </div>
   </div>
+  <script defer src="../js/addressbook.js"></script> 
+  <script defer src="../js/addressbook_form.js"></script>
 </body>
 
 </html>
