@@ -110,6 +110,7 @@ td {
 }
 .table-data {
   border: 1px solid #cecece;
+  margin-bottom: 10px;
 }
 th {
   text-align: left;
