@@ -29,6 +29,11 @@ body {
   max-height: 40px;
   padding-right: 10px;
 }
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
 .header-text {
   font: normal normal bold 20px/25px Montserrat;
   font-family: "Montserrat", sans-serif;

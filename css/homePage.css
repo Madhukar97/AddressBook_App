@@ -110,7 +110,8 @@ body {
 td {
   text-align: left;
   width: 100%;
-  padding: 15px 20px;
+  padding: 20px 20px;
+  padding-left: 40px;
   background-color: #ffffff;
 }
 
@@ -122,7 +123,8 @@ td {
 th {
   text-align: left;
   width: 100%;
-  padding: 15px 20px;
+  padding: 20px 20px;
+  padding-left: 40px;
   border: 0px solid #dd4a10;
   color: #467296;
 }
