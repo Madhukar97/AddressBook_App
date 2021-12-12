@@ -13,7 +13,7 @@ const getAddressbookDataFromStorage = () => {
 createInnerHtml = () => {
   if (addressbookList.length == 0) return;
   const headerHtml = "<th>FullName</th><th class='address-block'>Address</th><th>City" +
-                      "</th><th>State</th><th>Zip</th><th>Phone</th><th>Actions</th>";
+    "</th><th>State</th><th>Zip</th><th>Phone</th><th>Actions</th>";
 
   let innerHtml = `${headerHtml}`;
   for (const addressbookData of addressbookList) {
@@ -39,8 +39,8 @@ remove = (node) => {
   let addressbookData = addressbookList.find(person => person._name == node.id);
   if (!addressbookData) return;
   const index = addressbookList
-                .map(personName => personName._name)
-                .indexOf(addressbookData._name);
+    .map(personName => personName._name)
+    .indexOf(addressbookData._name);
   addressbookList.splice(index, 1);
   localStorage.setItem("AddressBookList", JSON.stringify(addressbookList));
   document.querySelector(".person-count").textContent = addressbookList.length;
