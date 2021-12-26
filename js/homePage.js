@@ -1,4 +1,5 @@
 let addressbookList;
+
 window.addEventListener('DOMContentLoaded', (event) => {
   addressbookList = getAddressbookDataFromStorage();
   document.querySelector('.person-count').textContent = addressbookList.length;
@@ -26,8 +27,8 @@ createInnerHtml = () => {
         <td>${addressbookData._zipcode}</td>
         <td>${addressbookData._phone}</td>
         <td>
-        <img class="buttons" id="${addressbookData._name}" onclick='remove(this)' alt="delete" src="../assets/icons/delete-black-18dp.svg">
-        <img class="buttons" id="${addressbookData._name}" alt="edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
+        <img class="buttons" id="${addressbookData.id}" onclick='remove(this)' alt="delete" src="../assets/icons/delete-black-18dp.svg">
+        <img class="buttons" id="${addressbookData.id}" alt="edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
         </td>
     </tr>
       `;
@@ -36,11 +37,11 @@ createInnerHtml = () => {
 }
 
 remove = (node) => {
-  let addressbookData = addressbookList.find(person => person._name == node.id);
+  let addressbookData = addressbookList.find(person => person.id == node.id);
   if (!addressbookData) return;
   const index = addressbookList
-    .map(personName => personName._name)
-    .indexOf(addressbookData._name);
+    .map(personName => personName.id)
+    .indexOf(addressbookData.id);
   addressbookList.splice(index, 1);
   localStorage.setItem("AddressBookList", JSON.stringify(addressbookList));
   document.querySelector(".person-count").textContent = addressbookList.length;
@@ -48,7 +49,7 @@ remove = (node) => {
 }
 
 const update = (node) => {
-  const addressbookData = addressbookList.find(person => person._name == node.id)
+  const addressbookData = addressbookList.find(person => person.id == node.id);
   if (!addressbookData) return;
   localStorage.setItem('editContact', JSON.stringify(addressbookData))
   window.location.replace(site_properties.add_person_page);

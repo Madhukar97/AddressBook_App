@@ -1,0 +1,28 @@
+{
+    "contacts": [
+        {
+            "_address": "seethammadhara",
+            "_city": "Mumbai",
+            "_name": "Madhukar Tatiraju",
+            "_phone": "9346729072",
+            "_state": "Maharashtra",
+            "_zipcode": "530013"
+        },
+        {
+            "_address": "Nad Lane number 7,Simhachalam",
+            "_city": "Vizag",
+            "_name": "Dinesh Bodepali",
+            "_phone": "+918437473059",
+            "_state": "Andhra Pradesh",
+            "_zipcode": "530032"
+        },
+        {
+            "_address": "DrNo 105 KurmanaPalem Visakhapatnam",
+            "_city": "Vizag",
+            "_name": "Saran Yellanki",
+            "_phone": "9612364190",
+            "_state": "Andhra Pradesh",
+            "_zipcode": "530020"
+        }
+    ]
+}

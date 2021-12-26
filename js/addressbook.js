@@ -1,4 +1,6 @@
 class Addressbook {
+  id;
+
   get name() {
     return this._name;
   }
@@ -40,7 +42,7 @@ class Addressbook {
     let zipRegex = RegExp('^[1-9]{1}[0-9]{5}$');
     if (zipRegex.test(zipcode))
       this._zipcode = zipcode;
-    else throw "zipcode is Incorrect";
+    else throw "zip is Incorrect";
   }
 
   get phone() {

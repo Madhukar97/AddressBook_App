@@ -31,16 +31,16 @@
           </div>
         </div>
         <div class="row-content">
-          <label class="label" for="name"></label>
+          <label class="label" for="name">FullName</label>
           <input class="input" type="text" id="name" name="name" placeholder="Full Name.." required>
-          <error-output class="name-error" for='text'></error-output>
         </div>
+        <error-output class="name-error" for='text'></error-output>
         <div class="row-content address">
-          <label class="label" for="address"></label>
+          <label class="label address-label" for="address">Address</label>
           <textarea class="input" type="text" id="address" name="address" placeholder="Address" required></textarea>
-          <error-output class="address-error" for='text'></error-output>
         </div>
-        <div class="row-content input-items">
+        <error-output class="address-error" for='text'></error-output>
+        <div class="input-items">
           <select id="city" name="city" required>
             <option aria-placeholder="">Select City</option>
             <option value="Vizag">Vizag</option>
@@ -57,15 +57,14 @@
             <option value="Rajasthan">Rajasthan</option>
             <option value="Karnataka">Karnataka</option>
           </select>
-          <label class="label" for="zip"></label>
           <input class="zip-code" type="text" id="zip" name="zip" placeholder="Zip Code" required>
-          <error-output class="zip-error" for='text'></error-output>
         </div>
+        <error-output class="zip-error" for='text'></error-output>
         <div class="row-content">
-          <label class="label" for="phone"></label>
+          <label class="label" for="phone">PhoneNo</label>
           <input class="input" type="text" id="phone" name="phone" placeholder="Phone No" required>
-          <error-output class="phone-error" for='text'></error-output>
         </div>
+        <error-output class="phone-error" for='text'></error-output>
         <div class="buttonParent">
           <button type="submit" class="addButton" id="addButton">Add</button>
           <button type="reset" class="resetButton" id="resetButton">Reset</button>
@@ -73,7 +72,8 @@
       </form>
     </div>
   </div>
-  <script defer src="../js/addressbook.js"></script>
+  <script defer src="../js/utility.js"></script>
+  <script defer src="../js/site_properties.js"></script>
   <script defer src="../js/addressbook_form.js"></script>
 </body>
 

@@ -75,7 +75,17 @@ body {
   justify-content: center;
   background-color: #ffffff;
   padding-top: 20px;
+}
+
+.label {
+  padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.address-label {
+  padding-right: 22px;
 }
 .cancel-button-img {
   max-width: 40px;
@@ -96,7 +106,7 @@ body {
   min-height: 100px;
 }
 select {
-  margin-right: 12.45%;
+  margin-right: 7.4%;
   width: 15%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -105,7 +115,7 @@ select {
   opacity: 1;
 }
 .zip-code {
-  width: 15%;
+  width: 12%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -114,7 +124,10 @@ select {
 .input-items {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-left: 9.4%;
 }
 .buttonParent {
   display: flex;
@@ -140,10 +153,17 @@ select {
   border-radius: 5px;
   font-size: 16px;
 }
-error-output {
+error-output{
   margin-left: 10px;
   font-size: 12px;
   font-style: italic;
   color: red;
+}
+
+.name-error, .address-error, .phone-error {
+  margin-left: 18%;
+}
+.zip-error {
+  margin-left: 77%;
 }
 
