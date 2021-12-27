@@ -2,12 +2,12 @@
     "contacts": [
         {
             "id": "1",
+            "_name": "Madhukar Tatiraju",
             "_address": "seethammadhara",
             "_city": "Mumbai",
-            "_name": "Madhukar Tatiraju",
-            "_phone": "9346729072",
             "_state": "Maharashtra",
-            "_zipcode": "530013"
+            "_zipcode": "530013",
+            "_phone": "9346729072"
         },
         {
             "id": "2",
