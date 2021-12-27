@@ -69,12 +69,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 const save = (event) => {
   try {
     setAddressBookObj();
-    createAndUpdateStorage();
-    window.location.replace(site_properties.home_page);
+    if (site_properties.use_local_storage.match("true")){
+      createAndUpdateStorage();
+      window.location.replace(site_properties.home_page);
+    }else createOrUpdateAddressbookIntoJSONServer();
   } catch (e) {
     return;
   }
 }
+
 
 const setAddressBookObj = () => {
   if (!isUpdate && site_properties.use_local_storage.match("true")){ 
@@ -86,6 +89,22 @@ const setAddressBookObj = () => {
   addressbookObj._state = document.querySelector('#state').value;
   addressbookObj._zipcode = document.querySelector('#zip').value;
   addressbookObj._phone = document.querySelector('#phone').value;
+}
+
+const createOrUpdateAddressbookIntoJSONServer = () => {
+  let postURL = site_properties.server_url;
+  let methodCall = "POST";
+  if (isUpdate) {
+    methodCall = "PUT";
+    postURL = postURL + addressbookObj.id.toString();
+  }
+  makeServiceCall(methodCall, postURL, true, addressbookObj)
+    .then(responseText => {
+      window.location.replace(site_properties.home_page);
+    }) 
+    .catch (error => {
+      throw error;
+    });
 }
 
 const createAndUpdateStorage = () => {
