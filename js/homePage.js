@@ -62,9 +62,20 @@ remove = (node) => {
     .map(personName => personName.id)
     .indexOf(addressbookData.id);
   addressbookList.splice(index, 1);
-  localStorage.setItem("AddressBookList", JSON.stringify(addressbookList));
-  document.querySelector(".person-count").textContent = addressbookList.length;
-  createInnerHtml();
+  if (site_properties.use_local_storage.match("true")) {
+    localStorage.setItem("AddressBookList", JSON.stringify(addressbookList));
+    document.querySelector(".person-count").textContent = addressbookList.length;
+    createInnerHtml();
+  }else {
+    const deleteURL = site_properties.server_url + addressbookData.id.toString();
+    makeServiceCall("DELETE",deleteURL,false)
+    .then(responseText => {
+      createInnerHtml();
+    })
+    .catch(error => {
+      console.log("DELETE Error Status: "+ JSON.stringify(error));
+    });
+  }
 }
 
 const update = (node) => {

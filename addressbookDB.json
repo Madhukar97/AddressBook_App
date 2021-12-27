@@ -19,22 +19,13 @@
       "_zipcode": "530032"
     },
     {
-      "id": "3",
-      "_address": "DrNo 105 KurmanaPalem Visakhapatnam",
-      "_city": "Vizag",
-      "_name": "Saran Yellanki",
-      "_phone": "9612364190",
-      "_state": "Andhra Pradesh",
-      "_zipcode": "530020"
-    },
-    {
-      "_name": "Dinesh Bodepali",
-      "_address": "Nad Lane number 7,Simhachalam",
-      "_city": "Hyderabad",
-      "_state": "Andhra Pradesh",
-      "_zipcode": "530032",
-      "_phone": "8437473059",
-      "id": "eCItpZ2"
+      "_name": "Rahul Sharma",
+      "_address": "Dr.no-50-50-2, Sethamadhara, Vizag",
+      "_city": "Select City",
+      "_state": "Select State",
+      "_zipcode": "436021",
+      "_phone": "9346729072",
+      "id": "DNU7BzE"
     }
   ]
 }
